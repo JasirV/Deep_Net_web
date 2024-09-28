@@ -1,6 +1,6 @@
 
 import './App.css'
-import Buttons from './components/Buttons/Buttons'
+import Buttons from './components/buttons/Buttons'
 import Category from './components/category/Category'
 import Footer from './components/footer/Footer'
 import Menu from './components/menu/Menu'
