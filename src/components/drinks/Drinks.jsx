@@ -22,13 +22,13 @@ console.log(drinks);
     <div className='border mb-3'>
   {/* Navediv */}
   <div className='flex justify-between items-center'>
-    <img src={drinkImg} alt="drinkImg" className='md:w-36 md:h-32 w-16 h-20 ' />
+    <img src={drinkImg} alt="drinkImg" className='md:w-36 md:h-32 w-16 h-20 md:relative -top-16 -left-12 ' />
     <div className='text-white flex items-center justify-center mt-5 md:gap-2'>
       <p className='font-extrabold '>_____</p>
       <p className='md:text-5xl font-extrabold custom-shadow text-4xl'>DRINKS</p>
       <p className='font-extrabold '>_____</p>
     </div>
-    <img src={cocktail} alt="cocktail" className='md:w-36 md:h-32 w-16 h-20 mt-2' />
+    <img src={cocktail} alt="cocktail" className='md:w-36 md:h-32 w-16 h-20 mt-2 md:relative -top-14 left-10' />
   </div>
 
   {/* Drink List */}

@@ -3,6 +3,7 @@ import HookahPage from '../hookah/HookahPage';
 import BgImage from '../../assets/Rectangle 116.png'
 import Mainfooter from '../mainfooter/Mainfooter';
 import  Drinks  from '../drinks/Drinks';
+import Cocktails from '../cocktails/Cocktails';
 const Category = () => {
 
     const backimage = {
@@ -29,6 +30,7 @@ const Category = () => {
 
           <div className='w-full'>
             <Drinks/>
+            <Cocktails/>
           <HookahPage/>
           </div>
           <div className='flex justify-center mt-12 mb-12'>
