@@ -23,29 +23,32 @@ const Footer = () => {
             email@42barandgrill.com
           </p>
         </div>
-        <div className="border border-1 border-white rounded-lg text-center px-16 order-1 md:order-2">
-          <img
-            src={Logo}
-            alt=""
-            className="w-18 h-14 relative -top-6 left-32 md:left-16"
-          />
-          <p className="text-[#857878] text-3xl font-bold font-mono">
+        <div className="border border-1 border-white rounded-lg text-center px-4 sm:px-8 md:px-16 order-1 md:order-2">
+          <div className="flex justify-center relative -top-6">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-18 md:h-18"
+            />
+          </div>
+          <p className="text-[#857878] text-2xl sm:text-3xl font-bold font-mono mt-2">
             <span className="text-[#0796EF]">DEEP</span>
             <span className="text-white"> NET </span>SOFT
           </p>
-          <div className=" justify-center gap-3 flex mt-2 mb-3">
-            <FiFacebook color="#808080" size={15} /> <CiTwitter color="#808080" size={15}/>
-            <FiYoutube color="#808080" size={15} /> <FaInstagram color="#808080" size={15} />
+          <div className="flex justify-center gap-4 mt-4 mb-3">
+            <FiFacebook color="#808080" size={20} />
+            <CiTwitter color="#808080" size={20} />
+            <FiYoutube color="#808080" size={20} />
+            <FaInstagram color="#808080" size={20} />
           </div>
         </div>
         <div className=" border border-1 border-white rounded-lg text-center px-16 p-2 md:w-80 h-36 order-3">
           <p className="text-[#0796EF] mt-2 mb-3 font-bold text-lg font-sans">
             FIND US
           </p>
-          <p className="text-wrap text-white flex md:gap-0 gap-4 justify-center"> 
-            <CiLocationOn color="#C5A059" size={32}/>
-            327 Memorial Dr SE, Atlanta, 
-            GA 30312, USA
+          <p className="text-wrap text-white flex md:gap-0 gap-4 justify-center">
+            <CiLocationOn color="#C5A059" size={32} />
+            327 Memorial Dr SE, Atlanta, GA 30312, USA
           </p>
         </div>
       </div>
