@@ -12,7 +12,6 @@ const Category = () => {
         backgroundPosition: 'center', 
         backgroundRepeat: 'no-repeat' 
       };
-    console.log(leftImage)
     return (
       <div className="max-w-full flex justify-between pt-5" style={backimage }>
         {/* leftsaidImage */}

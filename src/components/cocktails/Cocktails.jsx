@@ -2,20 +2,10 @@ import React, { useEffect, useState } from "react";
 import Img1 from "../../assets/chayya.png";
 import api from "../../api/axiosInstance";
 import Img2 from "../../assets/cocktail1 1.png";
-
+import { useQuery } from "@tanstack/react-query";
+import { useBrunch } from "../../hook/menuHook";
 const Cocktails = () => {
-  const [drinks, setDrinks] = useState([]);
-  useEffect(() => {
-    const fetchDrinks = async () => {
-      try {
-        const response = await api.get(`/items/${"BRUNCH"}`);
-        setDrinks(response.data.items);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchDrinks();
-  }, []);
+const{data}=useBrunch()
   return (
     <div className="border mb-3 mt-2">
       {/* Navediv */}
@@ -35,7 +25,7 @@ const Cocktails = () => {
       </div>
       {/* Drink List */}
       <div className="text-white p-10 grid grid-cols-1 md:grid-cols-2 gap-8 ">
-        {drinks?.map((i, index) => (
+        {data?.map((i, index) => (
           <div key={index} className="">
             <div className="flex justify-between items-center pb-2 mb-2 relative">
               <div className="w-3/4">

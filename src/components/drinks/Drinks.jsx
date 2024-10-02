@@ -2,21 +2,10 @@ import React, { useEffect, useState } from 'react'
 import api from '../../api/axiosInstance'
 import cocktail from '../../assets/cocktail 1.png'
 import drinkImg from '../../assets/drink final 1.png'
+import { useDrink } from '../../hook/menuHook'
 
 const Drinks = () => {
-    const [drinks,setDrinks]=useState([])
-useEffect(()=>{
-    const fetchDrinks= async ()=>{
-        try {
-            const response= await api.get(`/items/${"DRINKS"}`)
-            setDrinks(response.data.items)
-        } catch (error) {
-            console.error(error)
-        }
-    }
-    fetchDrinks()
-},[])
-console.log(drinks);
+  const { data, error, isLoading } = useDrink();
 
   return (
     <div className='border mb-3'>
@@ -33,7 +22,7 @@ console.log(drinks);
 
   {/* Drink List */}
   <div className="text-white p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-    {drinks?.map((i, index) => (
+    {data?.map((i, index) => (
       <div key={index} className="">
         <div className="flex justify-between items-center pb-2 mb-2 relative">
         <div className="w-3/4">
